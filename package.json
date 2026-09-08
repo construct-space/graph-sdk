@@ -1,0 +1,41 @@
+{
+  "name": "@construct-space/graph",
+  "version": "1.1.0",
+  "description": "Construct Graph — GraphQL database SDK for Construct spaces",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "bun run build",
+    "release": "bun run build && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/construct-space/graph.git"
+  },
+  "keywords": [
+    "construct",
+    "graph",
+    "graphql",
+    "database",
+    "sdk"
+  ],
+  "author": {
+    "name": "Construct Team"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
